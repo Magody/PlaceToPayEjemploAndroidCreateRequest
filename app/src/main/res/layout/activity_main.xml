@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <WebView
+        android:id="@+id/webViewPlaceToPay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" >
+
+    </WebView>
+
+    <TextView
+        android:id="@+id/textViewMainPeticion"
+        android:layout_width="match_parent"
+        android:layout_height="224dp"
+        android:textColor="@android:color/black" />
+
+    <Button
+        android:id="@+id/buttonMainEnviar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Generar y enviar petición" />
+
+    <TextView
+        android:id="@+id/textViewMainRespuesta"
+        android:layout_width="match_parent"
+        android:layout_height="178dp"
+        android:textColor="@android:color/black" />
+
+    <Button
+        android:id="@+id/buttonMainIrAlUrl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ir al URL de PlaceToPay" />
+
+
+</LinearLayout>
