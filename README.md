@@ -3,7 +3,7 @@ Referencia para la creación de una petición hacia Place To Pay usando retrofit
 Antes de ejecutar es necesario actualizar la variable del login (ParametrosPlaceToPay.LOGIN) y de la llave secreta (ParametrosPlaceToPay.SECRET_KEY)
 Y el endpoint si es necesario, se utiliza actualmente un sitio de pruebas y datos fictisios. No se filtra ningun dato que atente a la seguridad de PlaceToPay
 
-Al iniciar la aplicación aparecerán dos botones: el primero genera una nueva petición y recolecta el url de la respuesta.
+Al iniciar la aplicación aparecerán dos botones: el primero genera una nueva petición y recolecta el url de la respuesta mientras que el segundo inicia una navegación hacia la URL del proceso.
 
 Si retrofit devuelve un dato null significa que el login/secret-key no son correctos o que la creacion del transactkey en la autenticación ha fallado.
 
