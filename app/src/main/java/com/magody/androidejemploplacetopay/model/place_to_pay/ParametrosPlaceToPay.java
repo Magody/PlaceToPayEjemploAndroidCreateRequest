@@ -9,9 +9,35 @@ public class ParametrosPlaceToPay {
     public static final String BASE_URL = "https://test.placetopay.ec/";
     public static final String END_POINT = "redirection/api/session";
 
+
+    public static final String URL_BASE_INFORMATION =  "https://test.placetopay.ec/redirection/api/session/"; //se agrega el númemro devuelto
+
+
+    public static final int ID_ESTADO_OK = 11;
+    public static final String P2P_ESTADO_OK = "OK";
+    public static final int ID_ESTADO_FAILED = 12;
+    public static final String P2P_ESTADO_FAILED = "FAILED";
+    public static final int ID_ESTADO_APPROVED  = 13;
+    public static final String P2P_ESTADO_APPROVED = "APPROVED";
+    public static final int ID_ESTADO_APPROVED_PARTIAL = 14;
+    public static final String P2P_ESTADO_APPROVED_PARTIAL = "APPROVED_PARTIAL";
+    public static final int ID_ESTADO_PARTIAL_EXPIRED = 15;
+    public static final String P2P_ESTADO_PARTIAL_EXPIRED = "PARTIAL_EXPIRED";
+    public static final int ID_ESTADO_REJECTRED = 16;
+    public static final String P2P_ESTADO_REJECTRED = "REJECTED";
+    public static final int ID_ESTADO_PENDING = 17;
+    public static final String P2P_ESTADO_PENDING = "PENDING";
+    public static final int ID_ESTADO_PENDING_VALIDATION = 18;
+    public static final String P2P_ESTADO_PENDING_VALIDATION = "PENDING_VALIDATION";
+    public static final int ID_ESTADO_REFUNDED = 19;
+    public static final String P2P_ESTADO_REFUNDED = "REFUNDED";
+    public static final int ID_ESTADO_MANUAL = 20;
+    public static final String P2P_ESTADO_MANUAL = "MANUAL";
+
+
+
     public static final String ISO639_1_ESPANIOL = "es";
     public static final String ISO3166_1_ECUADOR = "EC";
-
 
 
 

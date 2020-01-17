@@ -34,7 +34,7 @@ public class PlaceToPay {
                                 null,
                                 null,
                                 country, null),
-                        null
+                        "0978656566"
                 ),
                 new PaymentRequest(
                         reference,

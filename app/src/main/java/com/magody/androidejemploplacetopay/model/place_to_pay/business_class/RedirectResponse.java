@@ -15,16 +15,25 @@ public class RedirectResponse {
     public int requestId;  //Referencia única de esta sesión
 
 
-    public static RedirectResponse JSON2RedirectResponse(JSONObject jsonObject){
 
-        try {
-            Status status = Status.JSON2Status(jsonObject.getJSONObject("status"));
 
-            return new RedirectResponse(status, jsonObject.getString("processUrl"), jsonObject.getInt("requestId"));
-        } catch (JSONException e) {
-            Log.e("Clase RedirectResponse", e.toString());
-        }
-        return null;
+    public String toRawString(){
+        return status.toRawString() + "#SEP_ATR#" +
+                processUrl + "#SEP_ATR#" +
+                requestId;
+    }
+
+    public static RedirectResponse reconstruirDesdeRaw(String raw){
+
+        String[] atributos = raw.split("#SEP_ATR#");
+
+        Status statu = Status.reconstruirDesdeRaw(atributos[0]);
+        String processUrl = atributos[1];
+        int requestId = Integer.parseInt(atributos[2]);
+
+        return new RedirectResponse(statu, processUrl, requestId);
+
+
     }
 
 

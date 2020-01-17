@@ -19,24 +19,27 @@ public class Status {
 
     public String message; // Descripción del código de razón
 
-    public Date dateTime; // Fecha y hora de este estado
+    public String dateTime; // Fecha y hora de este estado
 
-    public static Status JSON2Status(JSONObject jsonObject){
-        try {
 
-            Date dateT = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssZ", Locale.getDefault()).parse(jsonObject.getString("date"));
+    public String toRawString(){
 
-            return new Status(jsonObject.getString("status"), jsonObject.getString("reason"),
-                    jsonObject.getString("message"), dateT);
+        return status + "#SEP_ATR_SPC" +
+                reason + "#SEP_ATR_SPC" +
+                message + "#SEP_ATR_SPC" +
+                dateTime;
 
-        } catch (JSONException | ParseException e) {
-            Log.e("Clase status", e.toString());
-        }
-        return null;
+    }
+
+    public static Status reconstruirDesdeRaw(String raw){
+        String[] atributos = raw.split("#SEP_ATR_SPC");
+        return new Status(atributos[0], atributos[1], atributos[2], atributos[3]);
+
     }
 
 
-    public Status(String status, String reason, String message, Date dateTime) {
+
+    public Status(String status, String reason, String message, String dateTime) {
         this.status = status;
         this.reason = reason;
         this.message = message;
@@ -67,11 +70,11 @@ public class Status {
         this.message = message;
     }
 
-    public Date getDateTime() {
+    public String getDateTime() {
         return dateTime;
     }
 
-    public void setDateTime(Date dateTime) {
+    public void setDateTime(String dateTime) {
         this.dateTime = dateTime;
     }
 
